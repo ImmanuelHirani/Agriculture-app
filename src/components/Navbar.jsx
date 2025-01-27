@@ -7,9 +7,13 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white z-50 shadow-md md:text-base text-sm font-livvic font-semibold fixed container w-full md:top-8 top-4 rounded-[20px] starting:h-auto h-fit mx-auto right-1/2 translate-x-1/2">
-      <div className="w-fit mx-auto md:py-5 py-3.5 flex justify-between items-center">
-        <div className="flex items-center space-x-3 md:w-[17%] w-[35%]">
+    <nav className="z-50 shadow-md md:text-base text-sm font-livvic font-semibold fixed container w-full top-4 starting:h-auto h-fit mx-auto right-1/2 translate-x-1/2">
+      <div
+        className={` bg-white w-fit mx-auto md:py-5 py-3.5 transition-all ease-in-out duration-300 rounded-lg flex justify-between items-center md:px-8 px-4 ${
+          isMobileMenuOpen ? "rounded-b-none" : "roudded-lg"
+        }`}
+      >
+        <div className="flex items-center space-x-3 md:w-[17%] w-[45%]">
           <img src={logo} alt="Logo" className="w-full object-contain" />
         </div>
         <div className="hidden uppercase lg:flex mx-auto gap-14 items-center justify-center w-fit">
@@ -86,11 +90,11 @@ const Navbar = () => {
             <p>en</p>
           </span>
         </button>
-        <div className="wrap flex items-center gap-2">
+        <div className="wrap flex items-center gap-3">
           <button className="bg-secondary text-white py-1.5 px-3 w-fit lg:hidden rounded-full">
             <div className="flex items-center justify-center gap-2">
               <img src={world} alt="Language" className="w-[35%]" />
-              <p>en</p>
+              <p className="text-lg">en</p>
             </div>
           </button>
           <button
@@ -103,7 +107,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth="2"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-8 h-8"
             >
               <path
                 strokeLinecap="round"
@@ -116,10 +120,8 @@ const Navbar = () => {
       </div>
       {/* Mobile Drop down */}
       <div
-        className={`lg:hidden overflow-hidden transition-all  duration-500 ease-in-out  ${
-          isMobileMenuOpen
-            ? "max-h-screen opacity-100 pb-4"
-            : "max-h-0 opacity-0 pb-0"
+        className={`lg:hidden bg-white overflow-hidden transition-all  duration-300 ease-in-out  ${
+          isMobileMenuOpen ? "max-h-screen rounded-b-lg pb-4" : "max-h-0 pb-0"
         }`}
       >
         <a
