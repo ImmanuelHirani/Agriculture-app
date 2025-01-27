@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  /* Breakpoint Screen */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 22rem;
+  --breakpoint-md: 44rem;
+  --breakpoint-lg: 74rem;
+  --breakpoint-xl: 84rem;
+
+  /* Breakpoint Screen end */
+
+  /* Color */
+  --color-primary: #ffffff;
+  --color-secondary: #64903a;
+  --color-accent-primary: #334b35;
+  --color-accent-secondary: #1ba9e3;
+  --color-danger: #e92028;
+  /* Color end */
+
+  /* Fonts */
+  --font-livvic: "Livvic", sans-serif;
+  /* Fonts end */
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("fonts/Livic/Livvic-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("fonts/Livic/Livvic-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/Livic/Livvic-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Livic/Livvic-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/Livic/Livvic-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Livic/Livvic-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("fonts/Livic/Livvic-Black.ttf") format("truetype");
+}
+
+section {
+  @apply my-24;
+}
+
+@layer base {
+  .container {
+    @apply mx-auto px-4 md:px-8;
+  }
+
+  body {
+    @apply bg-white m-0 p-0;
+  }
+}
+
+/* Home Section Banner  */
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.swiper-slide {
+  @apply flex flex-col  justify-center;
+
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Home Section Banner End */
